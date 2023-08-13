@@ -1,0 +1,15 @@
+---
+framework: terraform
+output: cli
+skip-check:
+  - CKV_AZURE_59
+  - CKV_AZURE_109
+  - CKV_AZURE_112
+  - CKV_AZURE_189
+  - CKV_AZURE_206
+  - CKV2_AZURE_1
+  - CKV2_AZURE_21
+  - CKV2_AZURE_32
+  - CKV2_AZURE_33
+  # As we're using the Terraform Registry
+  - CKV_TF_1
