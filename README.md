@@ -1,5 +1,7 @@
 # Azure Secure Storage Account Terraform module
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ultratendency_terraform-azurerm-secure-storage-account&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ultratendency_terraform-azurerm-secure-storage-account)
+
 Terraform module which creates a Storage Account on Azure with secure defaults.
 
 ## Usage
