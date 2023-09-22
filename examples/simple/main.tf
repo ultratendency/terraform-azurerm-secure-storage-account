@@ -11,7 +11,6 @@ module "terraform_state_storage_account" {
   storage_account_location            = "westeurope"
   storage_container_name              = "tstate"
   key_vault_name                      = "tstate-vault"
-  monitor_diagnostic_setting_name     = "tstate"
   key_vault_key_name                  = "tstate-vault-key"
   key_vault_key_expiration_date       = "2023-12-30T20:00:00Z"
 }

@@ -45,10 +45,6 @@ module "terraform_state_storage_account" {
   key_vault_purge_protection_enabled   = false
   key_vault_soft_delete_retention_days = 7
 
-  monitor_diagnostic_setting_name                            = "tstate"
-  monitor_diagnostic_setting_metric_category                 = "AllMetrics"
-  monitor_diagnostic_setting_metric_retention_policy_enabled = true
-
   key_vault_key_name            = "tstate-vault-key"
   key_vault_key_key_type        = "EC"
   key_vault_key_key_size        = "1024"

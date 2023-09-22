@@ -16,12 +16,6 @@ output "azurerm_key_vault_id" {
   value       = azurerm_key_vault.this.id
 }
 
-# azurerm_monitor_diagnostic_setting outputs
-output "azurerm_monitor_diagnostic_setting_id" {
-  description = "The ID of the monitor diagnostic setting"
-  value       = azurerm_monitor_diagnostic_setting.this.id
-}
-
 # azurerm_key_vault_key outputs
 output "azurerm_key_vault_key_id" {
   description = "The ID of the key vault key"
