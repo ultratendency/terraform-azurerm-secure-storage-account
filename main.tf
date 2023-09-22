@@ -74,20 +74,6 @@ resource "azurerm_key_vault" "this" {
   tags = var.tags
 }
 
-resource "azurerm_monitor_diagnostic_setting" "this" {
-  name               = var.monitor_diagnostic_setting_name
-  target_resource_id = azurerm_key_vault.this.id
-  storage_account_id = azurerm_storage_account.this.id
-
-  metric {
-    category = var.monitor_diagnostic_setting_metric_category
-
-    retention_policy {
-      enabled = var.monitor_diagnostic_setting_metric_retention_policy_enabled
-    }
-  }
-}
-
 resource "azurerm_key_vault_key" "this" {
   name            = var.key_vault_key_name
   key_vault_id    = azurerm_key_vault.this.id

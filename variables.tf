@@ -218,24 +218,6 @@ variable "key_vault_soft_delete_retention_days" {
   default     = 90
 }
 
-# azurerm_monitor_diagnostic_setting variables
-variable "monitor_diagnostic_setting_name" {
-  type        = string
-  description = "The name of the diagnostic setting"
-}
-
-variable "monitor_diagnostic_setting_metric_category" {
-  type        = string
-  description = "(optional) The name of the diagnostic metric category"
-  default     = "AllMetrics"
-}
-
-variable "monitor_diagnostic_setting_metric_retention_policy_enabled" {
-  type        = bool
-  description = "(optional) Indicates whether the retention policy is enabled"
-  default     = false
-}
-
 # azurerm_key_vault_key variables
 variable "key_vault_key_name" {
   type        = string

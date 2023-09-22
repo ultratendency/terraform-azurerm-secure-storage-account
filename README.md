@@ -18,7 +18,6 @@ module "terraform_state_storage_account" {
   storage_account_location            = "westeurope"
   storage_container_name              = "tstate"
   key_vault_name                      = "tstate-vault"
-  monitor_diagnostic_setting_name     = "tstate"
   key_vault_key_name                  = "tstate-vault-key"
   key_vault_key_expiration_date       = "2023-12-30T20:00:00Z"
 }
@@ -69,10 +68,6 @@ module "terraform_state_storage_account" {
   key_vault_enable_rbac_authorization  = false
   key_vault_purge_protection_enabled   = false
   key_vault_soft_delete_retention_days = 7
-
-  monitor_diagnostic_setting_name                            = "tstate"
-  monitor_diagnostic_setting_metric_category                 = "AllMetrics"
-  monitor_diagnostic_setting_metric_retention_policy_enabled = true
 
   key_vault_key_name            = "tstate-vault-key"
   key_vault_key_key_type        = "EC"
