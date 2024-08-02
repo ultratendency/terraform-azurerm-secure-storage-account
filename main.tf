@@ -12,6 +12,7 @@ resource "azurerm_storage_account" "this" {
   table_encryption_key_type         = var.storage_account_table_encryption_key_type
   infrastructure_encryption_enabled = var.storage_account_infrastructure_encryption_enabled
   allow_nested_items_to_be_public   = var.storage_account_allow_nested_items_to_be_public
+  shared_access_key_enabled         = var.storage_account_shared_access_key_enabled
 
   queue_properties {
     logging {

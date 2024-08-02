@@ -17,6 +17,7 @@ module "terraform_state_storage_account" {
   storage_account_table_encryption_key_type                              = "Account"
   storage_account_infrastructure_encryption_enabled                      = true
   storage_account_allow_nested_items_to_be_public                        = true
+  storage_account_shared_access_key_enabled                              = true
   storage_account_queue_properties_logging_delete                        = false
   storage_account_queue_properties_logging_read                          = false
   storage_account_queue_properties_logging_write                         = false
