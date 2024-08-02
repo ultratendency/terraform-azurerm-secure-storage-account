@@ -12,7 +12,7 @@ module "terraform_state_storage_account" {
   storage_account_account_tier                                           = "Premium"
   storage_account_account_replication_type                               = "GRS"
   storage_account_min_tls_version                                        = "TLS1_1"
-  storage_account_enable_https_traffic_only                              = false
+  storage_account_https_traffic_only_enabled                             = false
   storage_account_queue_encryption_key_type                              = "Account"
   storage_account_table_encryption_key_type                              = "Account"
   storage_account_infrastructure_encryption_enabled                      = true

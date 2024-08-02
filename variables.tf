@@ -38,7 +38,7 @@ variable "storage_account_min_tls_version" {
   default     = "TLS1_2"
 }
 
-variable "storage_account_enable_https_traffic_only" {
+variable "storage_account_https_traffic_only_enabled" {
   type        = bool
   description = "(optional) Boolean flag which forces HTTPS if enabled"
   default     = true
