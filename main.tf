@@ -7,7 +7,7 @@ resource "azurerm_storage_account" "this" {
   account_tier                      = var.storage_account_account_tier
   account_replication_type          = var.storage_account_account_replication_type
   min_tls_version                   = var.storage_account_min_tls_version
-  enable_https_traffic_only         = var.storage_account_enable_https_traffic_only
+  https_traffic_only_enabled        = var.storage_account_https_traffic_only_enabled
   queue_encryption_key_type         = var.storage_account_queue_encryption_key_type
   table_encryption_key_type         = var.storage_account_table_encryption_key_type
   infrastructure_encryption_enabled = var.storage_account_infrastructure_encryption_enabled
