@@ -6,7 +6,8 @@ Terraform module which creates a Storage Account on Azure with secure defaults.
 
 ## Usage
 
-The simplest usage of this module is shown below. It requires a few parameters to passed in.
+The simplest usage of this module is shown below. It requires a few parameters to passed in and
+already uses the recommended default configuraton values.
 
 ```hcl
 module "terraform_state_storage_account" {
@@ -23,7 +24,8 @@ module "terraform_state_storage_account" {
 }
 ```
 
-A complete example looks like the following, where all inputs are configured.
+A complete example looks like the following, where all inputs are configured. Please note that the
+following is only a descriptive example and does not follow recommended configuration values.
 
 ```hcl
 module "terraform_state_storage_account" {
