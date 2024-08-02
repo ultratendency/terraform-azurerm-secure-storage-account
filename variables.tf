@@ -68,6 +68,12 @@ variable "storage_account_allow_nested_items_to_be_public" {
   default     = false
 }
 
+variable "storage_account_shared_access_key_enabled" {
+  type        = bool
+  description = "(optional) Indicates whether the storage account permits requests to be authorized with the account access key"
+  default     = false
+}
+
 variable "storage_account_queue_properties_logging_delete" {
   type        = bool
   description = "(optional) Indicates whether all delete requests should be logged"
