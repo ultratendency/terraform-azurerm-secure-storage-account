@@ -6,12 +6,13 @@ Terraform module which creates a Storage Account on Azure with secure defaults.
 
 ## Usage
 
-The simplest usage of this module is shown below. It requires a few parameters to passed in.
+The simplest usage of this module is shown below. It requires a few parameters to passed in and
+already uses the recommended default configuraton values.
 
 ```hcl
 module "terraform_state_storage_account" {
   source  = "ultratendency/secure-storage-account/azurerm"
-  version = "2.0.0"
+  version = "2.1.0"
 
   storage_account_name                = "tstate"
   storage_account_resource_group_name = "tstate"
@@ -23,12 +24,13 @@ module "terraform_state_storage_account" {
 }
 ```
 
-A complete example looks like the following, where all inputs are configured.
+A complete example looks like the following, where all inputs are configured. Please note that the
+following is only a descriptive example and does not follow recommended configuration values.
 
 ```hcl
 module "terraform_state_storage_account" {
   source  = "ultratendency/secure-storage-account/azurerm"
-  version = "2.0.0"
+  version = "2.1.0"
 
   storage_account_name                                                   = "tstate"
   storage_account_resource_group_name                                    = "tstate"
@@ -41,6 +43,7 @@ module "terraform_state_storage_account" {
   storage_account_table_encryption_key_type                              = "Account"
   storage_account_infrastructure_encryption_enabled                      = true
   storage_account_allow_nested_items_to_be_public                        = true
+  storage_account_shared_access_key_enabled                              = true
   storage_account_queue_properties_logging_delete                        = false
   storage_account_queue_properties_logging_read                          = false
   storage_account_queue_properties_logging_write                         = false
