@@ -12,7 +12,7 @@ already uses the recommended default configuraton values.
 ```terraform
 module "terraform_state_storage_account" {
   source  = "ultratendency/secure-storage-account/azurerm"
-  version = "3.0.0"
+  version = "3.0.1"
 
   storage_account_name                = "tstate"
   storage_account_resource_group_name = "tstate"
@@ -30,7 +30,7 @@ following is only a descriptive example and does not follow recommended configur
 ```terraform
 module "terraform_state_storage_account" {
   source  = "ultratendency/secure-storage-account/azurerm"
-  version = "3.0.0"
+  version = "3.0.1"
 
   storage_account_name                                                   = "tstate"
   storage_account_resource_group_name                                    = "tstate"
