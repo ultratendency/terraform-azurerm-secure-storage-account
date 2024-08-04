@@ -79,3 +79,72 @@ module "terraform_state_storage_account" {
   key_vault_key_expiration_date = "2023-12-30T20:00:00Z"
 }
 ```
+
+### Microsoft Entra user account as the authentication method
+
+When leaving the variable `storage_account_shared_access_key_enabled` with the default value
+`false` shared access keys are turned off on the storage account. This needs some configuration on
+the storage account itself, as outlined below
+
+#### Permissions
+
+The user principal running Terraform needs to have the `Storage Blob Data Contributor` role
+assigned. Please note that having the `Owner` or `Contributor` role assigned is not sufficient as
+the user prinicipal needs one of the `Storage Blob Data xxx` roles to access data within the
+storage blob.
+
+#### Storage Container configuration
+
+With the use of `storage_account_shared_access_key_enabled` the authentication method for the
+storage container will be switched to `Microsoft Entra user account`. Ensure that this change
+happened.
+
+#### Terraform backend configuration
+
+The recommended usage for the storage account as a Terraform backend is to use the authentication
+method `Service Principal or User Assigned Managed Identity via OIDC (Workload identity federation)`
+with `Azure AD` as the storage account authentication type. To configure both, the Terraform
+backend should contain the following configuration values
+
+```terraform
+...
+use_azuread_auth = true,
+use_oidc         = true,
+...
+```
+
+A complete Terraform backend configuration would look like the following
+
+```terraform
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "tstate"
+    storage_account_name = "tstate"
+    container_name       = "tstate"
+    key                  = "terraform.tfstate"
+    use_azuread_auth     = true
+    use_oidc             = true
+  }
+}
+```
+
+#### Terraform provider configuration
+
+To let the Terraform provider access the storage account without a shared access key, the following
+configuration needs to be set on the provider
+
+```terraform
+...
+storage_use_azuread = true
+...
+```
+
+A complete Terraform provider configuration would look like the following
+
+```terraform
+provider "azurerm" {
+  use_oidc            = true
+  storage_use_azuread = true
+  features {}
+}
+```
