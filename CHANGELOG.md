@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.0.1](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v3.0.0...v3.0.1) (2024-08-04)
+
+
+### Bug Fixes
+
+* **documentation:** Add a link to Terraform backend configuration ([#490](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/490)) ([21d8f29](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/21d8f295bacb5255fb76d75228eb3546b6cf037e))
+* **documentation:** Add documentation section about Azure AD auth ([#486](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/486)) ([8fb9f40](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/8fb9f40717832637652bd10034a9a6f34e2f4436))
+* **documentation:** Update code snippets to use Terraform formatting ([#488](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/488)) ([a0caeb9](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/a0caeb92d0bced080335d4881dd773d84eacb87f))
+
 ## [3.0.0](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v2.1.0...v3.0.0) (2024-08-04)
 
 
