@@ -9,7 +9,7 @@ Terraform module which creates a Storage Account on Azure with secure defaults.
 The simplest usage of this module is shown below. It requires a few parameters to passed in and
 already uses the recommended default configuraton values.
 
-```hcl
+```terraform
 module "terraform_state_storage_account" {
   source  = "ultratendency/secure-storage-account/azurerm"
   version = "3.0.0"
@@ -27,7 +27,7 @@ module "terraform_state_storage_account" {
 A complete example looks like the following, where all inputs are configured. Please note that the
 following is only a descriptive example and does not follow recommended configuration values.
 
-```hcl
+```terraform
 module "terraform_state_storage_account" {
   source  = "ultratendency/secure-storage-account/azurerm"
   version = "3.0.0"
