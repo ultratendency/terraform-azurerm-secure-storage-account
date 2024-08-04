@@ -128,6 +128,9 @@ terraform {
 }
 ```
 
+For a detailed look into available options, see the
+[available configuration options](https://developer.hashicorp.com/terraform/language/settings/backends/azurerm).
+
 #### Terraform provider configuration
 
 To let the Terraform provider access the storage account without a shared access key, the following
