@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.0.0](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v2.1.0...v3.0.0) (2024-08-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* **main:** Update enable_https_traffic_only to https_traffic_only_enabled ([#476](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/476))
+
+### breaking
+
+* **main:** Update enable_https_traffic_only to https_traffic_only_enabled ([#476](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/476)) ([3f5a089](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/3f5a089e915dac80cbd0a47a52de57c4aa585603))
+
+
+### Features
+
+* **documentation:** Update version in documentation to upcoming release ([#485](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/485)) ([cf1e7bb](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/cf1e7bbc528e8b581ee12cc863204e2b7932e885))
+
 ## [2.1.0](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v2.0.0...v2.1.0) (2024-08-02)
 
 
