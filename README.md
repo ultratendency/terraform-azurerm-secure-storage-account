@@ -7,15 +7,20 @@ Terraform module which creates a Storage Account on Azure with secure defaults.
 ## Usage
 
 The simplest usage of this module is shown below. It requires a few parameters to passed in and
-already uses the recommended default configuraton values.
+already uses the recommended default configuraton values. Please note that the resource group
+used for the deployment will not be created by this module.
 
 ```terraform
+data "azurerm_resource_group" "tstate" {
+  name = "tstate"
+}
+
 module "terraform_state_storage_account" {
   source  = "ultratendency/secure-storage-account/azurerm"
   version = "3.0.1"
 
   storage_account_name                = "tstate"
-  storage_account_resource_group_name = "tstate"
+  storage_account_resource_group_name = data.azurerm_resource_group.tstate.name
   storage_account_location            = "westeurope"
   storage_container_name              = "tstate"
   key_vault_name                      = "tstate-vault"
@@ -28,12 +33,16 @@ A complete example looks like the following, where all inputs are configured. Pl
 following is only a descriptive example and does not follow recommended configuration values.
 
 ```terraform
+data "azurerm_resource_group" "tstate" {
+  name = "tstate"
+}
+
 module "terraform_state_storage_account" {
   source  = "ultratendency/secure-storage-account/azurerm"
   version = "3.0.1"
 
   storage_account_name                                                   = "tstate"
-  storage_account_resource_group_name                                    = "tstate"
+  storage_account_resource_group_name                                    = data.azurerm_resource_group.tstate.name
   storage_account_location                                               = "westeurope"
   storage_account_account_tier                                           = "Premium"
   storage_account_account_replication_type                               = "GRS"
