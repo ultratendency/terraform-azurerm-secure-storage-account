@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.3](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v3.0.2...v3.0.3) (2024-09-13)
+
+
+### Bug Fixes
+
+* **documentation:** Update documentation version to 3.0.3 ([#542](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/542)) ([8553614](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/8553614244965cdc819facd8a8d9ae519346bc39))
+* **main:** Update required azurerm version to 3.114.0 ([#540](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/540)) ([a623dba](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/a623dba51dfc6072a404b1bb39b4bf230c6ebeb9))
+
 ## [3.0.2](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v3.0.1...v3.0.2) (2024-08-14)
 
 
