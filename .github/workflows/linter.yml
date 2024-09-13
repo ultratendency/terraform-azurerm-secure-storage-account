@@ -38,4 +38,5 @@ jobs:
           VALIDATE_TERRAFORM_TERRASCAN: false
           VALIDATE_CHECKOV: false
           VALIDATE_JSCPD: false
+          VALIDATE_MARKDOWN_PRETTIER: false
           VALIDATE_NATURAL_LANGUAGE: false
