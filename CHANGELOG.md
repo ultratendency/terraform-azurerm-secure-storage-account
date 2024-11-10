@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.0.0](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v3.0.3...v4.0.0) (2024-11-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **main:** Switch to use storage_account_id instead of name ([#590](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/590))
+* **main:** Update to azurerm_storage_account_queue_properties ([#587](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/587))
+
+### breaking
+
+* **main:** Switch to use storage_account_id instead of name ([#590](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/590)) ([74fedef](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/74fedefd0f59653ecdd09f3a03a3ceba495b2b4e))
+* **main:** Update to azurerm_storage_account_queue_properties ([#587](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/587)) ([a7507e0](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/a7507e007a0c92390284880afdd4a445ea3fdbea))
+
 ## [3.0.3](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v3.0.2...v3.0.3) (2024-09-13)
 
 
