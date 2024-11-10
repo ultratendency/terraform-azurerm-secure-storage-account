@@ -104,12 +104,6 @@ variable "storage_account_queue_properties_logging_retention_policy_days" {
   default     = 10
 }
 
-variable "storage_account_queue_properties_hour_metrics_enabled" {
-  type        = bool
-  description = "(optional) Indicates whether hour metrics are enabled for the queue service"
-  default     = true
-}
-
 variable "storage_account_queue_properties_hour_metrics_include_apis" {
   type        = bool
   description = "(optional) Indicates whether metrics should generate summary statistics for called API operations"
@@ -126,12 +120,6 @@ variable "storage_account_queue_properties_hour_metrics_retention_policy_days" {
   type        = number
   description = "(optional) The number of days that logs will be retained"
   default     = 10
-}
-
-variable "storage_account_queue_properties_minute_metrics_enabled" {
-  type        = bool
-  description = "(optional) Indicates whether minute metrics are enabled for the queue service"
-  default     = true
 }
 
 variable "storage_account_queue_properties_minute_metrics_include_apis" {

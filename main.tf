@@ -14,30 +14,6 @@ resource "azurerm_storage_account" "this" {
   allow_nested_items_to_be_public   = var.storage_account_allow_nested_items_to_be_public
   shared_access_key_enabled         = var.storage_account_shared_access_key_enabled
 
-  queue_properties {
-    logging {
-      delete                = var.storage_account_queue_properties_logging_delete
-      read                  = var.storage_account_queue_properties_logging_read
-      write                 = var.storage_account_queue_properties_logging_write
-      version               = var.storage_account_queue_properties_logging_version
-      retention_policy_days = var.storage_account_queue_properties_logging_retention_policy_days
-    }
-
-    hour_metrics {
-      enabled               = var.storage_account_queue_properties_hour_metrics_enabled
-      include_apis          = var.storage_account_queue_properties_hour_metrics_include_apis
-      version               = var.storage_account_queue_properties_hour_metrics_version
-      retention_policy_days = var.storage_account_queue_properties_hour_metrics_retention_policy_days
-    }
-
-    minute_metrics {
-      enabled               = var.storage_account_queue_properties_minute_metrics_enabled
-      include_apis          = var.storage_account_queue_properties_minute_metrics_include_apis
-      version               = var.storage_account_queue_properties_minute_metrics_version
-      retention_policy_days = var.storage_account_queue_properties_minute_metrics_retention_policy_days
-    }
-  }
-
   blob_properties {
     change_feed_enabled           = var.storage_account_blob_properties_change_feed_enabled
     change_feed_retention_in_days = var.storage_account_blob_properties_change_feed_retention_in_days
@@ -53,6 +29,30 @@ resource "azurerm_storage_account" "this" {
   }
 
   tags = var.tags
+}
+
+resource "azurerm_storage_account_queue_properties" "this" {
+  storage_account_id = azurerm_storage_account.this.id
+
+  logging {
+    delete                = var.storage_account_queue_properties_logging_delete
+    read                  = var.storage_account_queue_properties_logging_read
+    write                 = var.storage_account_queue_properties_logging_write
+    version               = var.storage_account_queue_properties_logging_version
+    retention_policy_days = var.storage_account_queue_properties_logging_retention_policy_days
+  }
+
+  hour_metrics {
+    include_apis          = var.storage_account_queue_properties_hour_metrics_include_apis
+    version               = var.storage_account_queue_properties_hour_metrics_version
+    retention_policy_days = var.storage_account_queue_properties_hour_metrics_retention_policy_days
+  }
+
+  minute_metrics {
+    include_apis          = var.storage_account_queue_properties_minute_metrics_include_apis
+    version               = var.storage_account_queue_properties_minute_metrics_version
+    retention_policy_days = var.storage_account_queue_properties_minute_metrics_retention_policy_days
+  }
 }
 
 resource "azurerm_storage_container" "this" {

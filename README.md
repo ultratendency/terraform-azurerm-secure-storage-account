@@ -58,11 +58,9 @@ module "terraform_state_storage_account" {
   storage_account_queue_properties_logging_write                         = false
   storage_account_queue_properties_logging_version                       = "1.0"
   storage_account_queue_properties_logging_retention_policy_days         = 20
-  storage_account_queue_properties_hour_metrics_enabled                  = false
   storage_account_queue_properties_hour_metrics_include_apis             = false
   storage_account_queue_properties_hour_metrics_version                  = "1.0"
   storage_account_queue_properties_hour_metrics_retention_policy_days    = 20
-  storage_account_queue_properties_minute_metrics_enabled                = false
   storage_account_queue_properties_minute_metrics_include_apis           = false
   storage_account_queue_properties_minute_metrics_version                = "1.0"
   storage_account_queue_properties_minute_metrics_retention_policy_days  = 20
