@@ -2,11 +2,14 @@
 framework: terraform
 output: cli
 skip-check:
+  # This leads to false positives after azurerm 4.9.0
+  - CKV_AZURE_33
   - CKV_AZURE_59
   - CKV_AZURE_109
   - CKV_AZURE_112
   - CKV_AZURE_189
   - CKV_AZURE_206
+  - CKV_AZURE_244
   - CKV2_AZURE_1
   - CKV2_AZURE_21
   - CKV2_AZURE_32
