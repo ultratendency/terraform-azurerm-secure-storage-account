@@ -57,7 +57,7 @@ resource "azurerm_storage_account_queue_properties" "this" {
 
 resource "azurerm_storage_container" "this" {
   name                  = var.storage_container_name
-  storage_account_name  = azurerm_storage_account.this.name
+  storage_account_id    = azurerm_storage_account.this.id
   container_access_type = var.storage_container_container_access_type
 }
 
