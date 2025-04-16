@@ -105,7 +105,7 @@ Permissions can also directly assigned via the `storage_account_role_assignments
 
 ```terraform
 ...
-data_disks = {
+storage_account_role_assignments = {
   user_1 = {
     principal_id         = "123"
     role_definition_name = "Storage Blob Data Contributor"
