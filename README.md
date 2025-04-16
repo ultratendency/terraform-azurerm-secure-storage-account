@@ -100,6 +100,24 @@ assigned. Please note that having the `Owner` or `Contributor` role assigned is 
 the user prinicipal needs one of the `Storage Blob Data xxx` roles to access data within the
 storage blob.
 
+Permissions can also directly assigned via the `storage_account_role_assignments` variable (or the respective
+`key_vault_role_assignments` variable for the Key Vault), similar to the following example
+
+```terraform
+...
+data_disks = {
+  user_1 = {
+    principal_id         = "123"
+    role_definition_name = "Storage Blob Data Contributor"
+  }
+  user_2 = {
+    principal_id         = "456"
+    role_definition_name = "Storage Blob Data Contributor"
+  }
+}
+...
+```
+
 #### Storage Container configuration
 
 With the use of `storage_account_shared_access_key_enabled` the authentication method for the
