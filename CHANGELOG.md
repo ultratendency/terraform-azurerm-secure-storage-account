@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.1](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v4.1.0...v4.1.1) (2025-04-16)
+
+
+### Bug Fixes
+
+* **documentation:** Fix example for usage of role assignments ([#732](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/732)) ([045e77d](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/045e77d2acc3f75f7754f7b1503cd2a6e5c589be))
+
 ## [4.1.0](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v4.0.0...v4.1.0) (2025-04-16)
 
 
