@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v4.0.0...v4.1.0) (2025-04-16)
+
+
+### Features
+
+* Add role assignments for Storage Account and Key Vault ([#730](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/730)) ([aa27c02](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/aa27c02584e82bace1101b51305e6f17ee7ced73))
+
 ## [4.0.0](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v3.0.3...v4.0.0) (2024-11-10)
 
 
