@@ -170,6 +170,15 @@ variable "storage_account_blob_properties_delete_retention_policy_days" {
   default     = 7
 }
 
+variable "storage_account_role_assignments" {
+  type = map(object({
+    principal_id         = string
+    role_definition_name = string
+  }))
+  description = "(optional) A map of role assignments to be created for the storage account"
+  default     = {}
+}
+
 # azurerm_storage_container variables
 variable "storage_container_name" {
   type        = string
@@ -239,4 +248,13 @@ variable "key_vault_key_key_opts" {
 variable "key_vault_key_expiration_date" {
   type        = string
   description = "Expiration UTC datetime of the key vault key"
+}
+
+variable "key_vault_role_assignments" {
+  type = map(object({
+    principal_id         = string
+    role_definition_name = string
+  }))
+  description = "(optional) A map of role assignments to be created for the key vault"
+  default     = {}
 }

@@ -61,6 +61,14 @@ resource "azurerm_storage_container" "this" {
   container_access_type = var.storage_container_container_access_type
 }
 
+resource "azurerm_role_assignment" "this_storage_account" {
+  for_each = var.storage_account_role_assignments
+
+  principal_id         = each.value.principal_id
+  role_definition_name = each.value.role_definition_name
+  scope                = azurerm_storage_account.this.id
+}
+
 resource "azurerm_key_vault" "this" {
   name                      = var.key_vault_name
   resource_group_name       = var.storage_account_resource_group_name
@@ -84,4 +92,16 @@ resource "azurerm_key_vault_key" "this" {
   expiration_date = var.key_vault_key_expiration_date
 
   tags = var.tags
+
+  depends_on = [
+    azurerm_role_assignment.this_key_vault,
+  ]
+}
+
+resource "azurerm_role_assignment" "this_key_vault" {
+  for_each = var.key_vault_role_assignments
+
+  principal_id         = each.value.principal_id
+  role_definition_name = each.value.role_definition_name
+  scope                = azurerm_key_vault.this.id
 }
