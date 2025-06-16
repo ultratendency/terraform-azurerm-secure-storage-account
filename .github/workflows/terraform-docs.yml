@@ -7,9 +7,17 @@ on:
       - "**.tf"
       - ".terraform-docs.yml"
       - ".terraform-version"
+    types:
+      - opened
+      - synchronize
+      - reopened
   pull_request_target:
     paths:
       - "**.tf"
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 jobs:
   docs:
