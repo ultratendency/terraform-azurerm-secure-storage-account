@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v4.1.1...v4.2.0) (2025-10-03)
+
+
+### Features
+
+* Internally change RBAC authorization property to new name ([#840](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/issues/840)) ([b127d17](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/commit/b127d17108ea5acf070d38acee3bfb48c22676f5))
+
 ## [4.1.1](https://github.com/ultratendency/terraform-azurerm-secure-storage-account/compare/v4.1.0...v4.1.1) (2025-04-16)
 
 
