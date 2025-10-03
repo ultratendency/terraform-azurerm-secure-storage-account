@@ -70,12 +70,12 @@ resource "azurerm_role_assignment" "this_storage_account" {
 }
 
 resource "azurerm_key_vault" "this" {
-  name                      = var.key_vault_name
-  resource_group_name       = var.storage_account_resource_group_name
-  location                  = var.storage_account_location
-  tenant_id                 = data.azurerm_client_config.current.tenant_id
-  sku_name                  = var.key_vault_sku_name
-  enable_rbac_authorization = var.key_vault_enable_rbac_authorization
+  name                       = var.key_vault_name
+  resource_group_name        = var.storage_account_resource_group_name
+  location                   = var.storage_account_location
+  tenant_id                  = data.azurerm_client_config.current.tenant_id
+  sku_name                   = var.key_vault_sku_name
+  rbac_authorization_enabled = var.key_vault_enable_rbac_authorization
 
   purge_protection_enabled   = var.key_vault_purge_protection_enabled
   soft_delete_retention_days = var.key_vault_soft_delete_retention_days
